@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sabor a tu Puerta</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css" />
+  <style>
+    .hero-body {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-body picture,
+    .hero-body img {
+      width: 100%;
+      display: block;
+    }
+
+    .hero-body .title,
+    .hero-body .subtitle {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      text-align: center;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+      padding: 0 1rem;
+      width: 100%;
+    }
+
+    .hero-body .title {
+      top: 30%;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .hero-body .subtitle {
+      top: 45%;
+      font-size: 1.25rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          🍽️ Sabor a tu Puerta
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="index.html">Inicio</a>
+          <a class="navbar-item" href="#menu">Menú</a>
+          <a class="navbar-item" href="#contacto">Contacto</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero is-large is-primary">
+      <div class="hero-body px-0 py-0">
+        <picture>
+          <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="Comida deliciosa" />
+        </picture>
+        <p class="title">Sabor a tu Puerta</p>
+        <p class="subtitle">Delicias caseras entregadas directamente a ti</p>
+      </div>
+    </section>
+
+    <section id="menu" class="columns py-5 my-5">
+      <div class="card column">
+        <div class="card-content">
+          <picture>
+            <img src="https://picsum.photos/id/431/360/280" alt="Café" />
+          </picture>
+          <p class="content">Delicioso Café de Copán</p>
+        </div>
+      </div>
+
+      <div class="card column">
+        <div class="card-content">
+          <picture>
+            <img src="https://picsum.photos/id/488/360/280" alt="Ensalada" />
+          </picture>
+          <p class="content">Deliciosa ensalada con ingredientes frescos</p>
+        </div>
+      </div>
+
+      <div class="card column">
+        <div class="card-content">
+          <picture>
+            <img src="https://picsum.photos/id/1080/360/280" alt="Fresas" />
+          </picture>
+          <p class="content">Deliciosas Fresas como un snack o como postre</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contacto">
+    <div class="content has-text-centered">
+      <p>
+        Contáctanos al (504) 1234-5678 o síguenos en redes:
+        <a href="#">WhatsApp</a> |
+        <a href="#">Instagram</a> |
+        <a href="#">Facebook</a>
+      </p>
+      <p>
+        Página creada por <strong>Reinaldo Izaguirre</strong> para <a href="https://unicah.edu">UNICAH ICC</a>.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.from(document.querySelectorAll('.navbar-burger'));
+      $navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
